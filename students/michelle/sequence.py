@@ -1,4 +1,4 @@
-sequence = "pythonic" 
+sequence = "123456789" 
 '''
 return a string with the first and last characters exchanged.
 '''
@@ -31,9 +31,10 @@ def slice_reverse(sequence):
 print (slice_reverse(sequence))
 
 '''
-return a string with the middle, then last, then first third in the new order
+return a string with the middle third, then last third, then first third in the new order
 '''
 def  reorder(sequence):
-	return sequence[0]+sequence[-1]+sequence[0:3]
+	m = len(sequence)//2
+	return sequence[m-1:m+1]+sequence[-4:]+sequence[0:3]
 print (reorder(sequence))
 
