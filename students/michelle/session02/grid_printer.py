@@ -8,4 +8,14 @@ def print_grid(n):
 	grid = border + middle * gaps + border + middle * gaps + border
 	print (grid)
 
-print_grid(12)
+def print_grid(cols, rows):
+	adj_col = (cols-3)//2
+	adj_row = (rows-3)//2  
+	minuses = "- " * adj_col
+	border = '+ ' + minuses + '+ ' + minuses + '+' + '\n'
+	spaces = '  '* adj_col
+	middle = '| ' + spaces + '| ' + spaces + '| ' + '\n'
+	grid = border + middle * adj_row + border + middle * adj_row + border
+	print (grid)
+
+print_grid(10,50)
